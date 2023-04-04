@@ -4,7 +4,8 @@ const songSchema = new mongoose.Schema({
     song: String,
     artist: String,
     album_image: String,
-    music: String },
+    music: String, 
+    listener: Number},
     {collection: 'Song'}
 );
 
