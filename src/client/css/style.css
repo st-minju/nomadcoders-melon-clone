@@ -1,0 +1,37 @@
+tr{
+    border-bottom: 1px rgba(134, 134, 134, 0.58) solid;
+    height: 70px;
+  }
+  
+  td {vertical-align:middle;}
+  
+  header {
+    width: 100%;
+    height: 89px;
+    left: 0px;
+    top: 0px;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(134, 134, 134, 0.28);
+  }
+  
+  header > div {
+    width: 100%;
+    height: 100%;
+  
+    left: 552px;
+    top: 16px;
+  
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+  
+    color: rgba(109, 47, 189, 0.61);
+  
+  }

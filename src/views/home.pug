@@ -1,19 +1,21 @@
 extends base
 
 block content
-    h1 인기차트
-    table(border="0", width="350px")
-        -for(var i=0; i < song.length ; i++)
-            tr
-                td #{i+1}
-                td
-                    img(src= song[i].album_image, height="50px")
-                td 
-                    p #{song[i].song}
-                    p #{song[i].artist}
-                td
-                    svg(height="50px" version="1.1" viewBox="0 0 36 36" width="50px")
-                        use(class="ytp-svg-shadow" xlink:href="#ytp-id-170")
-                        path(class="ytp-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" id="ytp-id-170")
-                        audio(controls="" autoplay="" name="media")
-                            source(src=song[i].music, type="audio/mpeg")
+    div(style="width: fit-content; margin: 30px 0px 30px 50px;")
+        p(style="font-size: 25px; height: 50px; display: flex; align-items: center;") 인기차트
+        table(border="0", width="350px" style="border-top: 1px solid;")
+            -for(var i=0; i < song.length ; i++)
+                tr
+                    td(width="50px",style="text-align: center;") #{i+1}
+                    td
+                        img(src= song[i].album_image, height="50px")
+                    td 
+                        p #{song[i].song}
+                        p #{song[i].artist}
+                    td
+                        svg(height="50px" version="1.1" viewBox="0 0 36 36" width="50px" className="playBtn" )
+                            use(class="ytp-svg-shadow" xlink:href="#ytp-id-170")
+                            path(class="ytp-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" id="ytp-id-170")
+                            //- audio(controls="" autoplay="" name="media")
+                            //-     source(src=song[i].music, type="audio/mpeg")
+
