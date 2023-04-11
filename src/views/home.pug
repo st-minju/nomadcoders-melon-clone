@@ -1,9 +1,9 @@
 extends base
 
 block content
-    div(style="width: fit-content; margin: 30px 0px 30px 50px;")
+    div(style="width: 50%; margin: 30px 0px 30px 50px;")
         p(style="font-size: 25px; height: 50px; display: flex; align-items: center;") 인기차트
-        table(border="0", width="350px" style="border-top: 1px solid;")
+        table(border="0", width="50%" style="border-top: 1px solid; min-width: fit-content;")
             -for(var i=0; i < song.length ; i++)
                 tr
                     td(width="50px",style="text-align: center;") #{i+1}
@@ -13,9 +13,11 @@ block content
                         p #{song[i].song}
                         p #{song[i].artist}
                     td
-                        svg(height="50px" version="1.1" viewBox="0 0 36 36" width="50px" className="playBtn" )
-                            use(class="ytp-svg-shadow" xlink:href="#ytp-id-170")
-                            path(class="ytp-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" id="ytp-id-170")
-                            //- audio(controls="" autoplay="" name="media")
-                            //-     source(src=song[i].music, type="audio/mpeg")
-
+                        img(src= "/main/svg/chart_play.svg" onclick= `loadSong('${JSON.stringify(song[i])}')`)
+                    td 
+                        div(class="listening") 
+                            p 🎧
+                            p #{song[i].listener}
+    div(style="width: 50%; margin: 30px 50px 30px 0px;")
+        p(style="font-size: 25px; height: 50px; display: flex; align-items: center;") 플레이리스트
+        table(border="0", width="350px" style="border-top: 1px solid;")

@@ -1,0 +1,20 @@
+div(style="width: 50%; margin: 30px 0px 30px 50px;")
+    p(style="font-size: 25px; height: 50px; display: flex; align-items: center;") 인기차트
+    table(border="0", width="50%" style="border-top: 1px solid; min-width: fit-content;")
+        -for(var i=0; i < song.length ; i++)
+            tr
+                td(width="50px",style="text-align: center;") #{i+1}
+                td
+                    img(src= song[i].album_image, height="50px")
+                td 
+                    p #{song[i].song}
+                    p #{song[i].artist}
+                td
+                    img(src= "/main/svg/chart_play.svg" onclick= `loadSong('${JSON.stringify(song[i])}')`)
+                td 
+                    div(class="listening") 
+                        p 🎧
+                        p #{song[i].listener}
+div(style="width: 50%; margin: 30px 50px 30px 0px;")
+    p(style="font-size: 25px; height: 50px; display: flex; align-items: center;") 플레이리스트
+    table(border="0", width="350px" style="border-top: 1px solid;")

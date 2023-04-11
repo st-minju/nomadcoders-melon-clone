@@ -1,1 +1,24 @@
-footer &copy; #{new Date().getFullYear()} XXXX
+footer 
+    //- &copy; #{new Date().getFullYear()} XXXX
+    //- for(var i=0; i < song.length ; i++)
+    div(class="bList")
+        table(border="0" style="border-top: 1px solid;" class="listTable")
+    div(class="runningBar")
+        div(class="seek-bar")
+        div(class="seek-time")
+        div(class="current-bar")
+    div(class="player")
+        div(style= "height: 80px; width: 20%; min-width: fit-content; display: flex; align-items: center;")
+            div(style= "margin: 0px 35px 0px 30px; height: 50px;")
+                div(class="album_image") 
+                div(class="LP")
+            div(style="font-size: 18px; height: 50px;") 
+                p(style="margin-top: 2px; margin-bottom: 5px;" class="title") empty
+                p(class="artist") playlist 
+        div(style= "width: 60%; height: 35px; display: flex; justify-content: center;")
+            img(src= "/main/svg/previous.svg" class="prevBtn" onclick="prevPlay();")
+            img(src= "/main/svg/play.svg" style="width: 70px;" class="playBtn" onclick="pauseSong();")  
+            img(src= "/main/svg/next.svg" class="nextBtn" onclick="nextPlay();")
+        div(style= "width: 20%;  display: flex; justify-content: flex-end; margin-right: 30px; align-items: center;")
+            div(class="progressTime")
+            img(src= "/main/svg/list.svg" class="sList" onclick="showList();")
