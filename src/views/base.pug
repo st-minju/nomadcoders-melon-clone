@@ -4,11 +4,13 @@ html(lang="ko")
         title #{pageTitle} | #{siteName}
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
         link(rel="stylesheet", href="/static/css/styles.css")
+        link(rel="stylesheet", type="text/css" href="/main/css/style.css")
     body
         include partials/header                
-        main
+        main(style= "display: flex; justify-content: space-between; margin-bottom: 100px;")
             block content
         include partials/footer
     script(src="/static/js/main.js")
-
+    script(src="/main/js/audio.js")
+        
     block scripts
